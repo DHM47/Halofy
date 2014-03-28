@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dhm47.halofy"
+    android:versionCode="2"
+    android:versionName="2" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+    
+    <uses-permission android:name="android.permission.GET_TASKS" />
+	
+	
+	<application
+	android:allowBackup="true"
+    android:label="Halofy"
+    android:icon="@drawable/ic_launcher">
+         
+		<activity
+            android:name="com.dhm47.halofy.Halo"
+            android:label="Halofy"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">     
+        </activity>
+        
+        <activity
+            android:name="com.dhm47.halofy.FullScreen"
+            android:label="Halofy"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">     
+        </activity>
+        
+        <activity
+            android:name="com.dhm47.halofy.Shortcut"
+            android:label="Halofy"
+            android:theme="@android:style/Theme.Holo.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        
+	</application>
+		
+   
+
+</manifest>
